@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>Todo List</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Todo List</h1>
+        <div class="input-group">
+            <input type="text" id="new-todo" placeholder="添加新任务...">
+            <button id="add-btn">添加</button>
+        </div>
+
+        <div class="todo-container">
+            <div class="todo-section">
+                <h2>待办事项 <span id="pending-count">0</span></h2>
+                <ul id="pending-list"></ul>
+            </div>
+
+            <div class="todo-section">
+                <h2>已完成 <span id="completed-count">0</span></h2>
+                <ul id="completed-list"></ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
