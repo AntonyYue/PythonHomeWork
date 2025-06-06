@@ -50,9 +50,6 @@ class GildedRose(object):
                     self._decrease_quality(item)
 
     def _validate_item(self, item):
-        if item.name not in self.VALID_ITEM_NAMES and not item.name.startswith("Conjured"):
-            item.name = "fixme"
-
         if not isinstance(item.quality, int) or item.quality < 0:
             item.quality = 0
         elif item.name != "Sulfuras, Hand of Ragnaros":
